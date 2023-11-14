@@ -1,0 +1,74 @@
+.todo{
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    margin: 10px;
+    /* border: 2px solid black; */
+}
+
+.item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid rgb(146, 146, 146); */
+    background-color: rgb(201, 242, 255);
+    padding: 10px;
+    border-radius: 10px;
+    width: 30vw;
+    transition: 0.5s;
+    /* height: 50vh; */
+}
+.item:hover{
+    transition: 0.5s;
+    width: 35vw;
+    /* transform: scale(1.05); */
+    /* transform: ; */
+}
+.content{
+    width: 100px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+.todo.done .content{
+    text-decoration: line-through;
+}
+
+
+.delete{
+    background-color: rgb(255, 114, 114);
+    color: white;
+    width: 100px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+}
+.submit-btn{
+    margin-top: 10px;
+    background-color: rgb(114, 192, 255);
+    color: white;
+    width: 31.5vw;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.todo-input{
+    width: 30vw;
+    height: 50px;
+    background-color: rgb(223, 223, 223);
+    /* color: white; */
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bold;
+}

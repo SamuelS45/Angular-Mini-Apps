@@ -1,0 +1,17 @@
+
+
+
+<div  class="post-container">
+    <h1 class="Post Title">Post</h1>
+    <div *ngFor="let post of postData[0]; let i = index" class="post">
+        <!-- <h1>Post</h1> -->
+        <div class="post-user">
+            <h3>User {{post.userId}}</h3>
+            <h5>Post {{post.id}}</h5>
+        </div>
+        <h3 class="post-title">{{post.title}}</h3>
+        <h4 class="post-content">{{post.body}}</h4>
+        <button class="post-btn like">Like</button>
+        <button class="post-btn dislike">Dislike</button>
+    </div>
+</div>

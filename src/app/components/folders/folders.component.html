@@ -1,0 +1,7 @@
+<div class="folders-container">
+    <h1>Folders</h1>
+    <button (click)="addFolder()">Add Folder +</button>
+    <div *ngFor="let folder of folders; let i = index">
+        <button>{{folder.name}}</button>
+    </div>
+</div>

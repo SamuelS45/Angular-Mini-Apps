@@ -1,0 +1,29 @@
+<div class="weather-container">
+    <div class="form-container">
+
+        <form class="weather-form"  (submit)="loadWeather()">
+            
+            <input 
+            class="search" 
+        title="input" 
+        [(ngModel)] = "city" 
+        type="text"
+        name="cityName"
+        placeholder="Search City Weather..."
+        >
+        <!-- <button (click)="loadWeather()">Search</button> -->
+        <input class="btn-search" placeholder="Submit" type="submit">
+    </form>
+</div>
+    <div class="weather">
+        <h1 class="msg {{(weatherData.length==0?'':'hide')}}">Search Weather of a City</h1>
+        <div class="w-content {{(weatherData.length==0?'':'show')}}" *ngIf="weatherData" >
+            <img class="icon" [src]="iconData" alt="icon">
+            <h1>{{weatherData.name}}</h1>
+            <h1>{{weatherData.main.temp}} °F</h1>
+            <h2>{{weatherData.main.humidity}}% humidity</h2>
+            <h3>{{weatherData.weather[0].description}}</h3>
+            <!-- <button (click)="loadWeather()" class="refresh-btn">Refresh</button> -->
+        </div>
+    </div>
+</div>

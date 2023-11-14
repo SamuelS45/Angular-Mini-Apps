@@ -1,0 +1,22 @@
+<div class="todos">
+    <!-- <p>Serveless Todo</p> -->
+    <form (submit)="addTodo()">
+        <input title="input"
+        class="todo-input" 
+        type="text"
+        placeholder="Enter Todo..."
+        [(ngModel)]="inputTodo"
+        name="inputTodo"
+        
+        >
+        <input class="submit-btn" type="submit" value="Add Todo">
+    </form>
+
+    <div class="todo {{(todo.completed?'done':'')}}" *ngFor="let todo of todos; let i = index;">
+        <div (mouseenter)="handleHover(i)" (mouseleave)="handleUnhover(i)" class="item">
+            <div class="id">{{i}}</div>
+            <h3 class="content" (click)="toggleDone(i)">{{todo.content}}</h3>
+            <button class="delete" (click)="deleteTodo(i)">Remove</button>
+        </div>
+    </div>
+</div>
