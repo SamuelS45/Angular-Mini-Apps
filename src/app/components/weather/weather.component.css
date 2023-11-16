@@ -118,9 +118,17 @@
 }
 
 @media (max-width:800px) { 
+    .search{
+        width:90%;
+    }
     .weather{
         width: 80%;
         /* height: 50%; */
         /* background-color: #110b30; */
+    }
+}
+@media (max-height:300px) { 
+    .search{
+        height: 14vh;
     }
 }
